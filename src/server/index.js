@@ -9,9 +9,21 @@
 import express from "express";
 import path from "path";
 
+const mongoose = require("mongoose");
+
 const {APP_PORT} = process.env;
 
 const app = express();
+
+console.log("coucou");
+
+mongoose
+    .connect(
+        "mongodb+srv://Aline:corses400@cluster0-pme76.mongodb.net/test?retryWrites=true&w=majority",
+        {useNewUrlParser: true, useUnifiedTopology: true},
+    )
+    .then(() => console.log("Connexion à MongoDB réussie !"))
+    .catch(() => console.log("Connexion à MongoDB échouée !"));
 
 app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
