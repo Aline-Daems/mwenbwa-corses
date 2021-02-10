@@ -8,22 +8,11 @@
 
 import express from "express";
 import path from "path";
-
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const {APP_PORT} = process.env;
 
 const app = express();
-
-console.log("coucou");
-
-mongoose
-    .connect(
-        "mongodb+srv://Aline:corses400@cluster0-pme76.mongodb.net/test?retryWrites=true&w=majority",
-        {useNewUrlParser: true, useUnifiedTopology: true},
-    )
-    .then(() => console.log("Connexion à MongoDB réussie !"))
-    .catch(() => console.log("Connexion à MongoDB échouée !"));
 
 app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
@@ -35,3 +24,13 @@ app.get("/hello", (req, res) => {
 app.listen(APP_PORT, () =>
     console.log(`🚀 Server is listening on port ${APP_PORT}.`),
 );
+
+try {
+    mongoose.connect(
+        "mongodb+srv://Aline:CORSES400>@cluster0.syldx.mongodb.net/LesCorses?retryWrites=true&w=majority",
+        {useNewUrlParser: true, useUnifiedTopology: true},
+        () => console.log("connected"),
+    );
+} catch (error) {
+    console.log("could not connect");
+}
