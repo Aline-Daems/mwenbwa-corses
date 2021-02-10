@@ -10,7 +10,7 @@ import * as React from "react";
 
 const HelloWorld = () => (
     <div>
-        <h1>{"Hello, Quentin!"}</h1>
+        <h1>{"Hello, Magali, alors dégoutée ?!"}</h1>
         <hr />
         <small>{"becode/mwenbwa"}</small>
     </div>
