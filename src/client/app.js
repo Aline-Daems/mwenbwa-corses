@@ -9,7 +9,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import "../style.scss";
+import TreesMap from "./components/map.js";
+// import HelloWorld from "./components/hello";
 
-import HelloWorld from "./components/hello";
-
-ReactDOM.render(<HelloWorld />, document.querySelector("#app"));
+ReactDOM.render(<TreesMap />, document.querySelector("#map"));
