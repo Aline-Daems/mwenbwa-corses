@@ -36,8 +36,9 @@ const TreesMap = () => {
                         position={[tree.y_phi, tree.x_lambda]}
                         icon={markerIcon}>
                         <Popup>
-                            {"A pretty CSS3 popup."} <br />{" "}
-                            {"Easily customizable."}
+                            {[tree.nom_complet]} <br />
+                            {"Nom du jouer"}
+                            {"Nombre de feuilles"}
                         </Popup>
                     </Marker>
                 ))}
