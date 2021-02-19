@@ -1,12 +1,15 @@
+/* ICON TREE artist => https://www.flaticon.com/fr/icone-gratuite/forme-darbre_41409 */
+
 // import React from "react";
 // import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 // import MarkerClusterGroup from "react-leaflet-markercluster";
 // import treesData from "../../../data/arbustum.json";
+// import iconBlack from "../../images/flaticonblack.png";
 // import L from 'leaflet';
 
-// //ICON TREE ////
+// //ICON TREE //
 // const markerIcon = new L.Icon({
-//   iconUrl: require("../../images/flaticon.png"),
+//   iconUrl: iconBlack,
 //   iconSize : [35, 45],
 // })
 
@@ -26,9 +29,9 @@
 //                 url={"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"}
 //             />
 //             <MarkerClusterGroup disableClusteringAtZoom={19}>
-//                 {filterTree.map((tree, index) => (
+//                 {filterTree.map((tree, arbotag) => (
 //                     <Marker
-//                     key={index}
+//                     key={arbotag}
 //                     position={[tree.y_phi, tree.x_lambda]}
 //                     icon={markerIcon}
 //                     >
@@ -43,22 +46,3 @@
 //     );
 // };
 // export default TreesMap;
-
-//ICON TREE ////
-// const markerIcon = new L.Icon({
-//   iconUrl: require("../../images/flaticon.png"),
-//   iconSize : [35, 45],
-// })
-
-// {arbustData.map((arbust, index) => (
-//   <MarkerClusterGroup>
-//   <Marker
-//   key={[index]}
-//   position={[arbust.y_phi, arbust.x_lambda]}
-//   // icon={markerIcon}
-//   />
-//   </MarkerClusterGroup>
-//   ))}
-
-// console.log(arbustData);
-//{arbustData.map(tree => console.log(tree.geoloc.lat))}
