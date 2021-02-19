@@ -9,6 +9,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 
-import HelloWorld from "./components/hello";
+import HelloWorld from "./components/home";
+import "../style.scss";
 
 ReactDOM.render(<HelloWorld />, document.querySelector("#app"));
