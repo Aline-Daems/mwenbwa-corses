@@ -30,14 +30,14 @@ function ProfilModal() {
                         // eslint-disable-next-line react/jsx-wrap-multilines
                         <>
                             <img className={"auban"} src={Auban} />
-                            <p className={"nameHello"} />
+                            <p className={"nameHello"}> {"Hello Auban"} </p>
                             <div className={"containerTree"}>
                                 <img className={"iconTree"} src={iconTree} />
-                                <span>{"4"}</span>
+                                <span className={"numberTree"}>{"4"}</span>
                             </div>
                             <div className={"containerLeaf"}>
                                 <img className={"iconLeaf"} src={iconLeaf} />
-                                <span>{"4739"}</span>
+                                <span className={"numberLeaf"}>{"4739"}</span>
                             </div>
                             <Tabs
                                 defaultTab={"one"}

@@ -3,8 +3,10 @@ import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import treesData from "../../../data/arbustum.json";
 import iconBlack from "../../images/flaticonblack.png";
+import leafBlack from "../../images/herbal-black.png";
+import iconGreen from "../../images/flaticongreen.png";
+import userIcon from "../../images/pixabay-user.png";
 import L from "leaflet";
-import ProfilMap from "./profil-map.js";
 
 //ICON TREE //
 const markerIcon = new L.Icon({
@@ -36,16 +38,46 @@ const TreesMap = () => {
                             position={[tree.y_phi, tree.x_lambda]}
                             icon={markerIcon}>
                             <Popup>
-                                {[tree.nom_complet]} <br />
-                                {"Nom du jouer"}
-                                <br />
-                                {"Nombre de feuilles"}
+                                <>
+                                    <img
+                                        className={"iconGreen"}
+                                        src={iconGreen}
+                                    />
+                                    <p>{[tree.nom_complet]}</p>
+                                    <div className={"iconGame"}>
+                                        <img
+                                            className={"iconGame__number"}
+                                            src={userIcon}
+                                        />
+                                        <p>{"Nom du jouer"}</p>
+                                    </div>
+                                    <div className={"iconGame"}>
+                                        <img
+                                            className={"iconGame__number"}
+                                            src={leafBlack}
+                                        />
+                                        <p>{"Nombre de feuilles"}</p>
+                                        <div className={"buttonPop"}>
+                                            <button
+                                                className={"buttonPop"}
+                                                // eslint-disable-next-line react/button-has-type
+                                                type={"button"}>
+                                                {"Buy"}
+                                            </button>
+                                            <button
+                                                className={"buttonPop"}
+                                                // eslint-disable-next-line react/button-has-type
+                                                type={"button"}>
+                                                {"More infos"}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </>
                             </Popup>
                         </Marker>
                     ))}
                 </MarkerClusterGroup>
             </MapContainer>
-            <ProfilMap />
         </>
     );
 };
