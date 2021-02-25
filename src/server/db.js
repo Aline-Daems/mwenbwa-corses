@@ -33,30 +33,4 @@ const getAllTrees = () => {
     return run();
 };
 
-const getUser = () => {
-    const client = new MongoClient(uri, {useUnifiedTopology: true});
-
-    async function run() {
-        try {
-            await client.connect();
-            const database = client.db("LesCorses");
-            const collection = database.collection("users");
-
-            const query = {
-                arbotag: {$ne: null},
-                circonf: {$ne: null},
-                hauteur_totale: {$ne: null},
-            };
-
-            const trees = await collection.find(query);
-            const result = await trees.toArray();
-
-            return result;
-        } finally {
-            await client.close();
-        }
-    }
-    return run();
-};
-
-module.exports = {getAllTrees, getUser};
+module.exports = {getAllTrees};
