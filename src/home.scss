@@ -1,0 +1,257 @@
+body {
+
+    background-color: rgb(143, 143, 143);
+    font-family: 'Snowburst One', cursive;
+    overflow-y: hidden;
+}
+
+.title {
+
+color: black;
+font-size: 3rem;
+text-align: center;
+
+}
+
+.subtitle{
+
+    color: black;
+font-size: 2rem;
+text-align: center;
+}
+.branch {
+    transform: translate(145%, -50%);
+}
+
+.tree {
+
+    transform: translate(0, -75%);
+    position: absolute;
+    height: 90%;
+}
+.signContainer{
+
+    .sign {
+
+        transform: translate(200%, -45%);
+        position: absolute;
+    }
+    button{
+        color:black;
+        font-size: 1.4rem;
+        position: relative;
+        z-index: 2;
+        font-weight: bolder;
+        &:hover{
+            color:green;
+        }  
+    }
+    .signin{
+        transform: translate(1320%, -460%);
+        font-size: 1.5rem;
+        
+    }
+    .signup {
+        transform:translate(1150%, -280%);
+    }
+    .rules {
+        transform: translate(1550%, -120%);
+        
+    }
+    .about {
+
+        transform: translate(1350%, 10%) rotate(-0.02turn);
+        font-size:1.3rem;
+        
+    }
+    .exit {
+        transform: translate(1650%, 199%);
+    }
+}
+
+.herbalContainer{
+    height:100%;
+    position: absolute;
+    z-index: 1;
+    .herbal {
+        
+        width:100%;
+        transform: translate(0, 20%);
+        
+    }
+}
+
+
+.panel-SignIn {
+
+        color:white;
+        position: relative;
+        z-index: 0;
+        transform: translate(135%, 200%);
+        font-size:30px;
+        font-weight: bolder;
+        width:30%;
+        text-shadow: 4px 4px 6px rgb(46, 45, 45,1);
+        
+        
+
+    }
+.panel {
+    overflow-x: hidden;
+    display:flex;
+    max-width:500px;
+    justify-content: center;
+
+}
+
+    .input-Username{
+
+        transform: translate(60%, -600%);
+        height:35px;
+        border: 1px solid black;
+        border-radius:5px;
+        text-align: center;
+    }
+    .input-Password {
+
+        transform: translate(-40%, -450%);
+        height:35px;
+        border: 1px solid black;
+        border-radius:5px;
+        text-align: center;
+    }
+
+    .login {
+
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        transform: translate(275%, -320%);
+        font-size: 22px;
+        padding:5px;
+        &:hover{
+            color:green;
+        }  
+    }
+
+.colors {
+    display:flex;
+    background-color: white;
+    align-items: center;
+    transform: translate(40%, -900%);
+    width: 60%;
+    border: 1px solid black;
+    border-radius:5px;
+    
+    p {
+         text-align: center;
+         margin-left: 5px;
+        } 
+
+    .purple {
+        border-radius: 50%;
+        background-color: rgb(195, 0, 235);
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+    }
+    .red {
+        @extend .purple;
+        background-color: rgb(250, 9, 9)
+    }
+    .green {
+        @extend .purple;
+        background-color: rgb(27, 228, 0)
+    }
+    .yellox {
+        @extend .purple;
+        background-color: rgb(226, 240, 41)
+    }
+    .blue {
+        @extend .purple;
+        background-color: rgb(14, 215, 230)
+    }
+}
+
+
+.input-Name{
+
+    @extend .input-Username;
+    width:30%;
+    margin: 15px;
+    transform: translate(60%, -650%);
+ }
+ .input-Email {
+
+    @extend .input-Username;
+    transform: translate(60%, -650%);
+            
+ }
+
+ .login-signup {
+
+    @extend .login;
+    transform: translate(285%, -500%);
+ }
+
+    
+
+ .modal-close-button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transform: translate(-200%,200%);
+    }
+ 
+
+ 
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1040;
+    }
+
+    .modal-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1050;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        outline: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .modal {
+        z-index: 100;
+        position: relative;
+        margin: auto;
+        border-radius: 5px;
+        max-width: 500px;
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-close-button {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #000;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
