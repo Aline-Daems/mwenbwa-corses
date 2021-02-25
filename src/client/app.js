@@ -9,6 +9,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import TreesMap from "./components/map";
+
 import "../style.scss";
 
 ReactDOM.render(<TreesMap />, document.querySelector("#app"));
