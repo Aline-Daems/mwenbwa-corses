@@ -42,6 +42,7 @@
  //NUMBER TREE
 .containerTree{
   margin: 3% 30%;
+  display: flex;
 }
 
 .numberTree{
@@ -52,6 +53,7 @@
 //NUMBER LEAF
 .containerLeaf{
   margin: 3% 30%;
+  display: flex;
 }
 
 .numberLeaf{
@@ -93,6 +95,7 @@
     border: none;
     font-size: 2rem;
     background-color: white;
+    margin-top: 1rem;
   }
 
   .profilButton{

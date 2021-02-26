@@ -67,6 +67,7 @@ a {
     font-family: 'Snowburst One', cursive;
     font-size:1.5rem;
     justify-content: center;
+    text-align: center;
   }
 
 //   ICONES & BUTTON
@@ -80,6 +81,7 @@ a {
 
   .iconGame{
     display:flex;
+    align-items: center;
 
     // NAME GAMER
    .iconGame__gamer{
@@ -88,8 +90,9 @@ a {
   }
     //ICON NAME AND LEAF
     .iconGame__icon{
-        width: 3vh;
-        height: 3vh;
+      width: 3vh;
+      height: 3vh;
+      margin-right: 1rem;
       }
 
     .iconGame__compteur{
@@ -100,6 +103,7 @@ a {
 
   .buttonPop{
     display:flex;
+    justify-content: space-between;
   }
 
   .leaflet-popup-content{
@@ -119,6 +123,8 @@ a {
     font-family: 'Snowburst One', cursive;
     font-size:1.5rem;
     padding: 20px 10px;
+    display: flex;
+    align-items: center;
   }
 
   //BUTTON + MORE
