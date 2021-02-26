@@ -3,56 +3,21 @@ import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 // import treesData from "../../../data/arbustum.json";
 import axios from "axios";
+import iconBlack from "../../images/flaticonblack.png";
+import leafBlack from "../../images/herbal-black.png";
+import iconGreen from "../../images/flaticongreen.png";
+import userIcon from "../../images/pixabay-user.png";
+import shop from "../../images/shopping-cart-solid.png";
 
-// async function getTrees() {
-//     try {
-//         let trees = await axios.get("/trees");
-//         console.log(trees);
-//         console.log("test");
-//         return trees;
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
-// getTrees();
+import L from "leaflet";
 
-// useEffect(() => {
-//     async function fetchData() {
-//         const request = await axios.get("/trees");
-//         setTrees(request.data);
-//         return request;
-//     }
-//     fetchData();
-// }, ["/trees"]);
-
-// useEffect(() => {
-//     const fetchData = async () => {
-//         const result = await axios("/trees");
-//         setTrees(result);
-//     };
-//     fetchData();
-// }, []);
-
-// console.log(trees);
-
-// function getTrees() {
-//     axios
-//         .get("/trees")
-//         .then(response => {
-//             // console.log(response.data[0].arbotag);
-//             // console.table(response.data);
-//         })
-//         .catch(e => {
-//             console.log("Error :", e);
-//         });
-// }
-// getTrees();
+//ICON TREE //
+const markerIcon = new L.Icon({
+    iconUrl: iconBlack,
+    iconSize: [35, 45],
+});
 
 const TreesMap = () => {
-    // const filterTree = treesData.filter(
-    //     tree => tree.y_phi != null && tree.x_lambda != null,
-    // );
-
     const [trees, setTrees] = useState([]);
 
     useEffect(() => {
@@ -76,10 +41,61 @@ const TreesMap = () => {
                 {trees.map(tree => (
                     <Marker
                         key={tree.id}
-                        position={[tree.y_phi, tree.x_lambda]}>
+                        position={[tree.y_phi, tree.x_lambda]}
+                        icon={markerIcon}>
                         <Popup>
-                            {"A pretty CSS3 popup."} <br />{" "}
-                            {"Easily customizable."}
+                            <>
+                                <img
+                                    className={"iconGreen"}
+                                    src={iconGreen}
+                                    alt={"icon"}
+                                />
+                                <p className={"NameTree"}>
+                                    {[tree.nom_complet]}
+                                </p>
+                                <div className={"iconGame"}>
+                                    <img
+                                        className={"iconGame__icon"}
+                                        src={userIcon}
+                                        alt={"icon"}
+                                    />
+                                    <p className={"iconGame__gamer"}>
+                                        {"Nom du jouer"}
+                                    </p>
+                                </div>
+                                <div className={"iconGame"}>
+                                    <img
+                                        className={"iconGame__icon"}
+                                        src={leafBlack}
+                                        alt={"icon"}
+                                    />
+                                    <p className={"iconGame__compteur"}>
+                                        {"Nombre de feuilles"}
+                                    </p>
+                                </div>
+                                <div className={"buttonPop"}>
+                                    <button
+                                        className={"buttonPopOne"}
+                                        // eslint-disable-next-line react/button-has-type
+                                        type={"button"}
+                                        onClick={""}>
+                                        <img
+                                            className={"iconGame__shop"}
+                                            src={shop}
+                                            alt={"icon"}
+                                        />
+                                        {"Buy"}
+                                    </button>
+                                    <button
+                                        className={"buttonPopTwo"}
+                                        // eslint-disable-next-line react/button-has-type
+                                        type={"button"}
+                                        onClick={""}>
+                                        {"+ More infos"}
+                                    </button>
+                                    {/* <Pop /> */}
+                                </div>
+                            </>
                         </Popup>
                     </Marker>
                 ))}
@@ -87,4 +103,5 @@ const TreesMap = () => {
         </MapContainer>
     );
 };
-export default TreesMap;
+
+export default {TreesMap};

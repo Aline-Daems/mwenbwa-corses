@@ -19,7 +19,7 @@ const getAllTrees = () => {
             };
 
             const options = {
-                projection: {_id: 1, x_lambda: 1, y_phi: 1},
+                projection: {_id: 1, x_lambda: 1, y_phi: 1, nom_complet: 1},
             };
 
             const trees = await collection.find(query, options);
