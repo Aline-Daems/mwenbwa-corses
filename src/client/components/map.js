@@ -6,6 +6,8 @@ import iconBlack from "../../images/flaticonblack.png";
 import leafBlack from "../../images/herbal-black.png";
 import iconGreen from "../../images/flaticongreen.png";
 import userIcon from "../../images/pixabay-user.png";
+import shop from "../../images/shopping-cart-solid.png";
+
 import L from "leaflet";
 
 //ICON TREE //
@@ -43,34 +45,47 @@ const TreesMap = () => {
                                         className={"iconGreen"}
                                         src={iconGreen}
                                     />
-                                    <p>{[tree.nom_complet]}</p>
+                                    <p className={"NameTree"}>
+                                        {[tree.nom_complet]}
+                                    </p>
                                     <div className={"iconGame"}>
                                         <img
-                                            className={"iconGame__number"}
+                                            className={"iconGame__icon"}
                                             src={userIcon}
                                         />
-                                        <p>{"Nom du jouer"}</p>
+                                        <p className={"iconGame__gamer"}>
+                                            {"Nom du jouer"}
+                                        </p>
                                     </div>
                                     <div className={"iconGame"}>
                                         <img
-                                            className={"iconGame__number"}
+                                            className={"iconGame__icon"}
                                             src={leafBlack}
                                         />
-                                        <p>{"Nombre de feuilles"}</p>
-                                        <div className={"buttonPop"}>
-                                            <button
-                                                className={"buttonPop"}
-                                                // eslint-disable-next-line react/button-has-type
-                                                type={"button"}>
-                                                {"Buy"}
-                                            </button>
-                                            <button
-                                                className={"buttonPop"}
-                                                // eslint-disable-next-line react/button-has-type
-                                                type={"button"}>
-                                                {"More infos"}
-                                            </button>
-                                        </div>
+                                        <p className={"iconGame__compteur"}>
+                                            {"Nombre de feuilles"}
+                                        </p>
+                                    </div>
+                                    <div className={"buttonPop"}>
+                                        <button
+                                            className={"buttonPopOne"}
+                                            // eslint-disable-next-line react/button-has-type
+                                            type={"button"}
+                                            onClick={""}>
+                                            <img
+                                                className={"iconGame__shop"}
+                                                src={shop}
+                                            />
+                                            {"Buy"}
+                                        </button>
+                                        <button
+                                            className={"buttonPopTwo"}
+                                            // eslint-disable-next-line react/button-has-type
+                                            type={"button"}
+                                            onClick={""}>
+                                            {"+ More infos"}
+                                        </button>
+                                        {/* <Pop /> */}
                                     </div>
                                 </>
                             </Popup>
