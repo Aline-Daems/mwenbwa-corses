@@ -11,8 +11,6 @@ import ReactDOM from "react-dom";
 import "../style.scss";
 import TreesMap from "./components/map.js";
 import ProfilMap from "./components/profil-map.js";
-// import Pop from "./components/popupmap.js";
 
 ReactDOM.render(<TreesMap />, document.querySelector("#map"));
 ReactDOM.render(<ProfilMap />, document.querySelector("#profil"));
-// ReactDOM.render(<Pop />, document.querySelector("#pop"));
