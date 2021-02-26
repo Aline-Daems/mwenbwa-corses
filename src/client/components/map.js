@@ -104,4 +104,4 @@ const TreesMap = () => {
     );
 };
 
-export default {TreesMap};
+export default TreesMap;
