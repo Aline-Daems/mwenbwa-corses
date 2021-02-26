@@ -10,6 +10,7 @@ import * as React from "react";
 import ReactDOM from "react-dom";
 import TreesMap from "./components/map";
 import ProfilMap from "./components/profil-map.js";
+// import {Route, BrowserRouter as Router} from "react-router-dom";
 import "../style.scss";
 
 ReactDOM.render(<TreesMap />, document.querySelector("#app"));
