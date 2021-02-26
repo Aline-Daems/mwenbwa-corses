@@ -25,7 +25,4 @@ Based on [external data](https://data.gov.be/en/node/48556), you will create a W
 * Tailwind
 * Leaflet
 
-## 📚 Library
-* Tailwind
-
 
