@@ -15,7 +15,7 @@ import useModal from "./use-modal";
 import Modal from "./modal";
 import React from "react";
 
-export default function App() {
+const home = () => {
     const {isShowing: isLoginFormShowed, toggle: toggleLoginForm} = useModal();
     const {
         isShowing: isRegistrationFormShowed,
@@ -174,4 +174,6 @@ export default function App() {
             </div>
         </div>
     );
-}
+};
+
+module.exports = {home};

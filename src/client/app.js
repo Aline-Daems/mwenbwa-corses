@@ -13,11 +13,3 @@ import TreesMap from "./components/map";
 import "../style.scss";
 
 ReactDOM.render(<TreesMap />, document.querySelector("#app"));
-
-// axios.get("/trees")
-//     .then(response => {
-//         ReactDOM.render(<Map trees={response.data} />, document.getElementById("mapid"))
-//     })
-//     .catch(e => {
-//         console.log("sad because :", e);
-//     });
