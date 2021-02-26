@@ -8,7 +8,6 @@ import leafBlack from "../../images/herbal-black.png";
 import iconGreen from "../../images/flaticongreen.png";
 import userIcon from "../../images/pixabay-user.png";
 import shop from "../../images/shopping-cart-solid.png";
-
 import L from "leaflet";
 
 //ICON TREE //

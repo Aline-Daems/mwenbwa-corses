@@ -14,6 +14,8 @@ import panel from "./pictures/panel.png";
 import useModal from "./use-modal";
 import Modal from "./modal";
 import React from "react";
+// import {Link, Route} from "react-router-dom";
+// import TreesMap from "./map";
 
 const home = () => {
     const {isShowing: isLoginFormShowed, toggle: toggleLoginForm} = useModal();
@@ -63,6 +65,7 @@ const home = () => {
                     {/* eslint-disable-next-line react/button-has-type */}
                     <button className={"exit"} type={"button"}>
                         {"Exit"}
+                        {/*<Link to={"/map"}>{"Exit"}</Link>*/}
                     </button>
 
                     <Modal
@@ -172,8 +175,11 @@ const home = () => {
                     <img src={herbal} className={"herbal"} alt={"herbal"} />
                 </div>
             </div>
+            {/*<Route path={"/map"}>*/}
+            {/*    <TreesMap />*/}
+            {/*</Route>*/}
         </div>
     );
 };
 
-module.exports = {home};
+export default home;
