@@ -14,7 +14,8 @@ import panel from "./pictures/panel.png";
 import useModal from "./use-modal";
 import Modal from "./modal";
 import React from "react";
-// import {Link, Route} from "react-router-dom";
+// import App from "./components/app.js";
+// import {Link} from "react-router-dom";
 // import TreesMap from "./map";
 
 const home = () => {
@@ -65,7 +66,7 @@ const home = () => {
                     {/* eslint-disable-next-line react/button-has-type */}
                     <button className={"exit"} type={"button"}>
                         {"Exit"}
-                        {/*<Link to={"/map"}>{"Exit"}</Link>*/}
+                        {/* <Link to={"/map"}>{"Exit"}</Link> */}
                     </button>
 
                     <Modal
