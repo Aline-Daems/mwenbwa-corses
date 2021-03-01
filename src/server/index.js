@@ -7,18 +7,40 @@
  */
 
 import express from "express";
+import mongoose from "mongoose";
 import path from "path";
-// import "config.js";
+import {getAllTrees} from "./db";
+import authRoutes from "./routes/auth.routes";
 
 const {APP_PORT} = process.env;
+
+// Database Connection URL
+mongoose.Promise = global.Promise;
+mongoose.connect(
+    `mongodb+srv://Auban:corse400@cluster0.syldx.mongodb.net/myFirstDatabase?retryWrites=true&writeConcern=majority`,
+    {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+    },
+    () => console.log("You are connected to the DB Atlas"),
+);
+mongoose.connection.on("error", () => {
+    throw new Error(`Unable to connect to database`);
+});
 
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, "../../bin/client")));
 
-app.get("/hello", (req, res) => {
-    console.log(`ℹ️  (${req.method.toUpperCase()}) ${req.url}`);
-    res.send("Hello, World!");
+app.use(express.json());
+
+// pointer la route vers le dossier route
+app.use("/api/auth", authRoutes);
+
+app.get("/trees", async (req, res) => {
+    const request = await getAllTrees();
+    res.send(request);
 });
 
 app.listen(APP_PORT, () =>

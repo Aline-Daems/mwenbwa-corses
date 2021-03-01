@@ -62,7 +62,7 @@ module.exports = env => {
         module: {
             rules: [
                 {
-                    test: /\.(png|jpg|gif)$/,
+                    test: /\.(png|jpg|gif|svg)$/,
                     use: [
                         {
                             loader: "file-loader",
@@ -70,6 +70,17 @@ module.exports = env => {
                                 name: "[path][name].[ext]",
                             },
                         },
+                    ],
+                },
+                {
+                    test: /\.s[ac]ss$/i,
+                    use: [
+                      // Creates `style` nodes from JS strings
+                      "style-loader",
+                      // Translates CSS into CommonJS
+                      "css-loader",
+                      // Compiles Sass to CSS
+                      "sass-loader",
                     ],
                 },
                 {

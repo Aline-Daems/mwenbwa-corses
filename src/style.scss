@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap');
+@import "./home.scss";
+@import "./profil.scss";
+@import "./map.scss";
+
+body {
+  margin: 0;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.markercluster-map {
+  height: 90vh;
+}
+
+

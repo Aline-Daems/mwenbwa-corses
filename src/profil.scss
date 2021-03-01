@@ -1,0 +1,183 @@
+/* Popup style */
+
+/* ================================
+    MIXIN
+   ================================ */
+
+   @mixin center{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+  @mixin tabProfil{
+    background-color: white;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: none;
+    border-radius: 20px 0px 0px 0px;
+  }
+
+/* ================================
+        CONTAINER
+   ================================ */
+
+#profil{
+    position: absolute;
+    z-index:2;
+}
+
+/* ================================
+        Popup
+   ================================ */
+
+   //USER NAME
+.nameHello{
+  padding: 30px 10px;
+  font-family: 'Snowburst One', cursive;
+  font-size:2rem;
+  text-align: center;
+}
+
+ //NUMBER TREE
+.containerTree{
+  margin: 3% 30%;
+  display: flex;
+}
+
+.numberTree{
+  font-family: 'Snowburst One', cursive;
+    font-size:1.8rem;
+}
+
+//NUMBER LEAF
+.containerLeaf{
+  margin: 3% 30%;
+  display: flex;
+}
+
+.numberLeaf{
+  font-family: 'Snowburst One', cursive;
+  font-size:1.8rem;
+}
+
+.popup-box {
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+  }
+   
+  .box {
+    position: relative;
+    width: 50vh;
+    margin: 0px 0px;
+    height: 100%;
+    min-height: 100vh;
+    margin-top:0px;
+    margin-left:0px;
+    background: #fff;
+    border: 1px solid #999;
+  }
+   
+  .close-icon {
+    content: 'x';
+    cursor: pointer;
+    position: fixed;
+    margin-left:46vh;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+    background-color: white;
+    margin-top: 1rem;
+  }
+
+  .profilButton{
+      background-color: white;
+      margin-top: 10vh;
+      margin-left: 1.5vh;
+      padding: 1vh 1vh;
+      width: 5vh;
+      height: 5vh;
+      border: none;
+      border-radius: 15px;
+  }
+
+/* ================================
+        TAB
+   ================================ */
+
+   .tabOne{
+    list-style: none;
+    margin: 30px 30px;
+    font-family: 'Snowburst One', cursive;
+    font-size:1.5rem;
+   }
+
+   .tabTwo{
+    list-style: none;
+    margin: 30px 30px;
+    font-family: 'Snowburst One', cursive;
+    font-size:1.5rem;
+  }
+
+  .buttonTabOne {
+    background-color: #d2f8c9;
+    border: none;
+    width: 50%;
+    height: 10vh;
+    font-family: 'Snowburst One', cursive;
+    font-size:1.5rem;
+  }
+
+  .buttonTabOne:hover {
+    @include tabProfil;
+  }
+
+  .buttonTabOne:focus {
+    @include tabProfil;
+  }
+
+  .buttonTabTwo {
+    background-color: #d2f8c9;
+    border: none;
+    width: 50%;
+    height: 10vh;
+    font-family: 'Snowburst One', cursive;
+    font-size:1.5rem;
+  }
+
+  .buttonTabTwo:hover {
+    @include tabProfil;
+  }
+
+  .buttonTabTwo:focus {
+    @include tabProfil;
+  }
+
+/* ================================
+        PICTURE
+   ================================ */
+
+   .iconTree{
+    width: 6vh;
+    margin-right: 40px;
+  }
+
+  .iconLeaf{
+    width: 6vh;
+    margin-right: 40px;
+  }
+
+  .auban{
+    margin-top: 30px;
+    display: block;
+    width: 20vh;
+    @include center;
+  }
